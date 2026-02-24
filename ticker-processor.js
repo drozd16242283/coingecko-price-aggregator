@@ -133,7 +133,7 @@ function processTickersForCoin({ runId, coinId, symbol, name, tickers = [], topE
                 if (t?.is_stale === true) return true;
                 if (!t?.last_traded_at) return false;
                 const ts = Date.parse(t.last_traded_at);
-                return !Number.isFinite(ts) || nowMs - ts > MAX_STALENESS_MS;
+                return !Number.isFinite(ts) || now - ts > MAX_STALENESS_MS;
             });
 
             missingExchanges.push({

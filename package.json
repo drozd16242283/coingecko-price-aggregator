@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test --test-concurrency=1 test/api.e2e.test.js",
     "start": "node index.js"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "^5.2.1",
     "mongodb": "^7.1.0",
-    "node-cron": "^4.2.1"
+    "node-cron": "^4.2.1",
+    "supertest": "^7.2.2"
   }
 }
